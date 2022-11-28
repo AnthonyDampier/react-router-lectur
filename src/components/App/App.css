@@ -24,10 +24,26 @@
 
 img {
   margin: 20px;
-  max-width: 400px;
+  width: 100px;
+  height: 100px;
+  flex:content;
+  border-radius: 1.5rem;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+nav ul {
+  list-style-type: none;
+  margin: 15px;
+  padding: 15px;
+  display: inline-flex;
+}
+
+nav ul li  {
+  margin: 15px;
+  color: black;
+}
+

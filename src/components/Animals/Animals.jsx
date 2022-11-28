@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 let animals = [
   "https://cdn.pixabay.com/photo/2015/04/10/01/41/fox-715588__340.jpg",
@@ -9,16 +10,29 @@ let animals = [
 ]
 
 function Animals() {
+
+  const history = useHistory();
+
+  const goToPlantsPage = () => {
+    console.log('Clicked on button');
+    // axios.put() ..... .then
+    //got to the animals page
+    history.push('/plants');
+  }
+
   return (
     <div>
       <h1>ANIMALS</h1>
+      <button onClick={goToPlantsPage}>Plants are better</button>
 
+      <div>
       {animals.map((animal, i) => 
         <img 
           key={i}
           src={animal}
         />
       )}
+      </div>
     </div>
   );
 }
