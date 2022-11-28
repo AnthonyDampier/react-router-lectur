@@ -7,6 +7,8 @@ import { HashRouter as Router, Route, Link} from 'react-router-dom';
 import Animals from '../Animals/Animals.jsx';
 import Plants from '../Plants/Plants.jsx';
 import Home from '../Home/Home.jsx';
+import AnimalDetail from '../Animals/AnimalsDetails';
+
 
 function App() {
   return (
@@ -33,6 +35,13 @@ function App() {
         <Route exact path="/animals">
           <Animals/>
         </Route>
+
+        {/* Detail page or detail View */}
+        <Route exact path="/animals/:id">
+          <AnimalDetail />
+        </Route>
+
+
         <Route exact path="/plants">
           <Plants />
         </Route>
